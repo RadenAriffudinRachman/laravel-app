@@ -54,7 +54,9 @@ class StudentsController extends Controller
 
         $request->validate([
             'nama' => 'required',
-            'nrp' => 'required | size:9'
+            'nrp' => 'required | size:9',
+            'email' => 'required',
+            'jurusan' => 'required'
         ]);
 
         Student::create($request->all());
@@ -93,6 +95,14 @@ class StudentsController extends Controller
      */
     public function update(Request $request, Student $student)
     {
+
+        $request->validate([
+            'nama' => 'required',
+            'nrp' => 'required | size:9',
+            'email' => 'required',
+            'jurusan' => 'required'
+        ]);
+
         Student::where('id', $student->id)
             ->update([
                 'nama' => $request->nama,
