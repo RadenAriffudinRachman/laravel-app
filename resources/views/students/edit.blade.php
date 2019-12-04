@@ -1,12 +1,12 @@
 @extends('template/main')
 
-@section('tittle', 'Form Tambah Data Mahasiswa')
+@section('tittle', 'Form Ubah Data Mahasiswa')
 
 @section('container')
 <div class="container">
     <div class="row">
         <div class="col-8">
-            <h1 class="mt-3">Form Tambah Data Mahasiswa</h1>
+            <h1 class="mt-3">Form Ubah Data Mahasiswa</h1>
 
             <form method="post" action="/students" >
                 @csrf
@@ -38,7 +38,7 @@
                     <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                 </div>
-                <button type="submit" class="btn btn-primary">Tambah Data</button>
+                <button type="submit" class="btn btn-primary">Ubah Data</button>
             </form>
 
         </div>
